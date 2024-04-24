@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Categories extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'category_name', 'active'
+    ];
+
+    // protected $guarded = [];
+
+    static function todas_las_categorias(){
+        return Note::where('active', true)->get();
+    }
+
+    static function categoria_por_id($id){
+        return Note::where('id', $id)
+            ->where('active', true)
+            ->firstOrFail();
+    }
 }
