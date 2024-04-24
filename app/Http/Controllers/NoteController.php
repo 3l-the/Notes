@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Note;
-
+use Illuminate\Support\Facades\DB;
 class NoteController extends Controller
 {
     /**
@@ -14,7 +14,11 @@ class NoteController extends Controller
      */
     public function index()
     {
-        $notes = Note::todas_las_notas();
+        $notes = DB::table('notes')
+        ->join('categories', 'categories.id', '=', 'notes.category_id')
+        ->select('notes.id','notes.title', 'notes.content', 'categories.category_name')
+        ->where('notes.active', true)
+        ->get();
         // dd($notes);
         return view('notes.index', compact('notes'));
     }
@@ -26,6 +30,7 @@ class NoteController extends Controller
      */
     public function create()
     {
+        $categories = DB::table('categories');
         return view('notes.create');
     }
 

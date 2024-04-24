@@ -16,6 +16,7 @@ class NoteSeeder extends Seeder
         $note = new Note();
         $note->title = "Primer nota";
         $note->content = "Nota a traves de seeder";
+        $note->category_id = 1;
         $note->active = true;
         $note->save();
     }

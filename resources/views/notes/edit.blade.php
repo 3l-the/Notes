@@ -36,6 +36,16 @@
                         <textarea name="content" rows="10" class="form-control">{{ $note->content }}</textarea>
                     </div>
 
+                    <div class="mb-3">
+                        <label for="" class="form-label">Categoria</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Selecciona una categoria</option>
+                            @foreach ($categories as $value => $label)
+                            <option value="{{$value}}" {{($categories->id == $value) ? 'selected' : ''}}> {{$label}} </option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="text-end">
                         <input type="submit" value="Editar Nota" class="btn btn-warning">
                     </div>

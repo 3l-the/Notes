@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Categories::todas_las_notas();
+        $categories = Categories::todas_las_categorias();
         // dd($notes);
         return view('categories.index', compact('categories'));
     }
