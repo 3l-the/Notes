@@ -13,9 +13,9 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        $note = new Categories();
-        $note->category_name = "Prueba";
-        $note->active = true;
-        $note->save();
+        $categories = new Categories();
+        $categories->category_name = "Prueba";
+        $categories->active = true;
+        $categories->save();
     }
 }

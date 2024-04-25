@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NoteController;
 
@@ -21,4 +22,8 @@ Route::get('/', function () {
 
 Route::resources([
     '/notes'    =>  NoteController::class
+]);
+
+Route::resources([
+    '/categories'    =>  CategoryController::class
 ]);

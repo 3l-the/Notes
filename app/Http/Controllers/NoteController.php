@@ -30,7 +30,6 @@ class NoteController extends Controller
      */
     public function create()
     {
-        $categories = DB::table('categories');
         return view('notes.create');
     }
 
@@ -43,8 +42,9 @@ class NoteController extends Controller
     public function store(Request $request)
     {
         Note::create([
-            'title' =>  $request->title,
-            'content'   =>  $request->content
+            'title' => $request->title,
+            'content' =>  $request->content,
+            'category' => $request->categories->category_name
         ]);
 
         // return to_route('notes.index');

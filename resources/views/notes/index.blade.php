@@ -31,6 +31,7 @@
 
         <div class="row mb-4">
             <div class="col text-end">
+                <a href="{{ route('categories.index') }}" class="btn btn-warning">Ver Categorias</a>
                 <a href="{{ route('notes.create') }}" class="btn btn-success">Nueva Nota +</a>
             </div>
         </div>

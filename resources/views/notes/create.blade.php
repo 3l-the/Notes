@@ -39,8 +39,8 @@
                         <label for="" class="form-label">Categoria</label>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Selecciona una categoria</option>
-                            @foreach ($categories as $value => $label)
-                            <option value="{{$value}}" {{($categories->id == $value) ? 'selected' : ''}}> {{$label}} </option>
+                            @foreach ($notes as $value => $label)
+                            <option value="{{$value}}" {{($notes->categories.category_name == $value) ? 'selected' : ''}}> {{$label}} </option>
                             @endforeach
                         </select>
                     </div>
