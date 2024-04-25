@@ -41,9 +41,9 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>id</th>
-                            <th>Name</th>
-                            <th>Actions</th>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
 

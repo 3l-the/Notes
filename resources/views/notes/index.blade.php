@@ -41,10 +41,10 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>id</th>
-                            <th>Title</th>
-                            <th>Content</th>
-                            <th>Actions</th>
+                            <th>Id</th>
+                            <th>Titulo</th>
+                            <th>Contenido</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
 
