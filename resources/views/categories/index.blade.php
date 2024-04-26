@@ -32,7 +32,7 @@
         <div class="row mb-4">
             <div class="col text-end">
                 <a href="{{ route('notes.index') }}" class="btn btn-warning">Ver notas</a>
-                <a href="{{ route('categories.create') }}" class="btn btn-success">Nueva Categoria +</a>
+                <a href="{{ route('categories.create') }}" class="btn btn-success">Nueva Categoría +</a>
             </div>
         </div>
 
@@ -59,7 +59,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="4">No hay categorias.</td>
+                                <td colspan="4">No hay categorías.</td>
                             </tr>
                         @endforelse
 
