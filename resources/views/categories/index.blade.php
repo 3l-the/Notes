@@ -49,12 +49,12 @@
 
                     <tbody>
 
-                        @forelse($categories as $categories)
+                        @forelse($categories as $category)
                             <tr>
-                                <td>{{ $categories->id }}</td>
-                                <td>{{ $categories->category_name }}</td>
+                                <td>{{ $category->id }}</td>
+                                <td>{{ $category->category_name }}</td>
                                 <td>
-                                    <a href="{{ route('categories.show', $categories->id) }}" class="btn btn-secondary">Ver</a>
+                                    <a href="{{ route('categories.show', $category->id) }}" class="btn btn-secondary">Ver</a>
                                 </td>
                             </tr>
                         @empty

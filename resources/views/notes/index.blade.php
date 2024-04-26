@@ -44,6 +44,7 @@
                             <th>Id</th>
                             <th>Titulo</th>
                             <th>Contenido</th>
+                            <th>Categoria</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -55,6 +56,7 @@
                                 <td>{{ $note->id }}</td>
                                 <td>{{ $note->title }}</td>
                                 <td>{{ $note->content }}</td>
+                                <td>{{ $note->category_name }}</td>
                                 <td>
                                     <a href="{{ route('notes.show', $note->id) }}" class="btn btn-secondary">Ver</a>
                                 </td>

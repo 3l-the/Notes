@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Note;
+use App\Models\Categories;
 use Illuminate\Support\Facades\DB;
 class NoteController extends Controller
 {
@@ -30,7 +31,9 @@ class NoteController extends Controller
      */
     public function create()
     {
-        return view('notes.create');
+        $categories = Categories::orderBy('id', 'desc')->get();
+        return view('notes.create')
+            ->with('categories', $categories);
     }
 
     /**
@@ -44,7 +47,7 @@ class NoteController extends Controller
         Note::create([
             'title' => $request->title,
             'content' =>  $request->content,
-            'category' => $request->categories->category_name
+            'category_id' => 0
         ]);
 
         // return to_route('notes.index');
@@ -72,8 +75,10 @@ class NoteController extends Controller
      */
     public function edit($id)
     {
+        $categories = Categories::orderBy('id', 'desc')->get();
         return view('notes.edit')
-            ->with('note', Note::nota_por_id($id));
+            ->with('note', Note::nota_por_id($id))
+            ->with('categories', $categories);
     }
 
     /**

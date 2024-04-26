@@ -19,6 +19,10 @@
             </div>
         </div>
 
+        <div class="text-end">
+            <a href="{{ route('notes.index') }}" class="btn btn-success">Regresar a Notas</a>
+        </div>
+
         <div class="row justify-content-center">
             <div class="col-12 col-md-9 col-lg-6">
                 <table class="table mb-4">
@@ -30,7 +34,11 @@
                     </tbody>
                 </table>
 
+                <h3>Contenido</h3>
                 <p style="white-space: pre-wrap;">{{ $note->content }}</p>
+
+                <h3>Categoria</h3>
+                <p style="white-space: pre-wrap;">{{ $note->category_name }}</p>
 
                 <div class="text-end">
                     <a href="{{ route('notes.edit', $note->id) }}" class="btn btn-warning">Editar Nota</a>

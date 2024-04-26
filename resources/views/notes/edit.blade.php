@@ -38,10 +38,10 @@
 
                     <div class="mb-3">
                         <label for="" class="form-label">Categoria</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <select name="category_name" id="category" class="form-control">
                             <option selected>Selecciona una categoria</option>
-                            @foreach ($categories as $value => $label)
-                            <option value="{{$value}}" {{($categories->id == $value) ? 'selected' : ''}}> {{$label}} </option>
+                            @foreach ($categories as $value)
+                            <option value="{{$value->id}}"> {{$value->id}} {{$value->category_name}}</option>
                             @endforeach
                         </select>
                     </div>
