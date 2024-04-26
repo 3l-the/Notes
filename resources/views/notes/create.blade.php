@@ -36,11 +36,11 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="" class="form-label">Categoría</label>
-                        <select name="category_name" id="category_name" class="form-control">
-                            <option selected value = 0>Selecciona una categoría</option>
+                        <label for="" class="form-label">Categoria</label>
+                        <select name="category_name" id="category" class="form-control">
+                            <option selected value = 0>Selecciona una categoria</option>
                             @foreach ($categories as $value)
-                            <option value="{{$value->id}}">{{$value->category_name}}</option>
+                            <option value="{{$value->id}}"> {{$value->category_name}}</option>
                             @endforeach
                         </select>
                     </div>
