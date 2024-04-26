@@ -16,11 +16,11 @@ class Categories extends Model
     // protected $guarded = [];
 
     static function todas_las_categorias(){
-        return Note::where('active', true)->get();
+        return Categories::where('active', true)->get();
     }
 
     static function categoria_por_id($id){
-        return Note::where('id', $id)
+        return Categories::where('id', $id)
             ->where('active', true)
             ->firstOrFail();
     }

@@ -47,7 +47,7 @@ class NoteController extends Controller
         Note::create([
             'title' => $request->title,
             'content' =>  $request->content,
-            'category_id' => 0
+            'category_id' => $request->category_name
         ]);
 
         // return to_route('notes.index');
