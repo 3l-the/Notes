@@ -37,8 +37,8 @@
                 <h3>Contenido</h3>
                 <p style="white-space: pre-wrap;">{{ $note->content }}</p>
 
-                <h3>Categoria</h3>
-                <p style="white-space: pre-wrap;">{{ $note->category_name }}</p>
+                <!--<h3>Categoria</h3>
+                <p style="white-space: pre-wrap;">{{ $note->category_name }}</p>!-->
 
                 <div class="text-end">
                     <a href="{{ route('notes.edit', $note->id) }}" class="btn btn-warning">Editar Nota</a>
