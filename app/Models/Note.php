@@ -11,7 +11,7 @@ class Note extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'content', 'active'
+        'title', 'content', 'active', 'category_id'
     ];
 
     // protected $guarded = [];
