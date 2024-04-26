@@ -75,7 +75,7 @@ class NoteController extends Controller
      */
     public function edit($id)
     {
-        $categories = Categories::orderBy('id', 'desc')->get();
+        $categories = Categories::orderBy('id', 'desc')->where('active', true)->get();
         return view('notes.edit')
             ->with('note', Note::nota_por_id($id))
             ->with('categories', $categories);
