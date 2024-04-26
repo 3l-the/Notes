@@ -31,7 +31,7 @@ class NoteController extends Controller
      */
     public function create()
     {
-        $categories = Categories::orderBy('id', 'desc')->get();
+        $categories = Categories::orderBy('id', 'desc')->where('active', true)->get();
         return view('notes.create')
             ->with('categories', $categories);
     }
